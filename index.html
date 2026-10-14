@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebijakan Privasi (Privacy Policy) · Nǐ Hànzì (你汉字)</title>
+  <meta name="description" content="Kebijakan Privasi resmi aplikasi Nǐ Hànzì (Belajar Karakter Hanzi & HSK Mandarin).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #B72B2B;
+      --primary-soft: #FDF2F2;
+      --primary-border: #F5C6C6;
+      --ink: #1C242E;
+      --ink-soft: #4A5568;
+      --ink-light: #718096;
+      --bg: #F9F9F8;
+      --card-bg: #FFFFFF;
+      --border: #E2E8F0;
+      --gold: #D4AF37;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF9F7 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 20px 28px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+
+    .header-content {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-soft);
+      border: 1px solid var(--primary-border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .brand-seal {
+      background: var(--primary);
+      color: white;
+      font-family: 'Noto Serif SC', serif;
+      font-size: 13px;
+      font-weight: 700;
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .meta-sub {
+      font-size: 13px;
+      color: var(--ink-light);
+    }
+
+    .lang-switcher {
+      margin-top: 14px;
+      display: inline-flex;
+      background: #EDF2F7;
+      padding: 3px;
+      border-radius: 20px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 16px;
+      border-radius: 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: white;
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    main {
+      max-width: 820px;
+      margin: 30px auto 60px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 32px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.02);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #EDF2F7;
+      padding-bottom: 8px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 14.5px;
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+    }
+
+    ul, ol {
+      margin-left: 22px;
+      margin-bottom: 14px;
+      color: var(--ink-soft);
+      font-size: 14.5px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .callout {
+      background: #F0FDF4;
+      border-left: 4px solid #16A34A;
+      padding: 14px 16px;
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+
+    .callout.alert {
+      background: #FEF2F2;
+      border-left-color: #DC2626;
+    }
+
+    .callout-title {
+      font-weight: 600;
+      font-size: 13.5px;
+      color: var(--ink);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .callout p {
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 13.5px;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    th {
+      background: #F8FAFC;
+      font-weight: 600;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--ink-light);
+      background: #FFFFFF;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .badge-icon {
+      font-size: 14px;
+    }
+
+    .lang-section {
+      display: none;
+    }
+
+    .lang-section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <div class="brand-badge">
+        <span class="brand-seal">汉</span>
+        <span class="brand-text">Nǐ Hànzì · 你汉字</span>
+      </div>
+      <h1>Kebijakan Privasi (Privacy Policy)</h1>
+      <div class="meta-sub">
+        Aplikasi: <strong>Nǐ Hànzì</strong> · Package: <code>com.nakito.nihanzi</code> · Terakhir Diperbarui: <strong>14 Oktober 2026</strong>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLang('id')">🇮🇩 Bahasa Indonesia</button>
+        <button class="lang-btn" onclick="switchLang('en')">🇬🇧 English</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+
+      <!-- ================= INDONESIAN CONTENT ================= -->
+      <div id="content-id" class="lang-section active">
+        <h2>1. Pendahuluan</h2>
+        <p>Selamat datang di <strong>Nǐ Hànzì</strong> ("Aplikasi"). Kami menghormati privasi Anda dan berkomitmen penuh untuk melindungi data pribadi pengguna kami. Kebijakan Privasi ini menjelaskan bagaimana informasi Anda dikumpulkan, digunakan, disimpan, dan dilindungi saat menggunakan aplikasi pembelajaran bahasa Mandarin Nǐ Hànzì.</p>
+        <p>Dengan mengunduh atau menggunakan aplikasi ini, Anda menyetujui ketentuan yang tercantum dalam Kebijakan Privasi ini.</p>
+
+        <h2>2. Data yang Dikumpulkan & Tujuan Penggunaannya</h2>
+
+        <h3>A. Akun Google (Google Sign-In)</h3>
+        <p>Saat Anda masuk menggunakan akun Google, kami menerima informasi profil publik dasar dari Google:</p>
+        <ul>
+          <li><strong>Alamat Email:</strong> Digunakan sebagai identifikasi akun unik Anda.</li>
+          <li><strong>Nama Tampilan & Foto Profil Publik:</strong> Hanya digunakan untuk ditampilkan di menu profil Pengaturan aplikasi.</li>
+          <li><strong>User ID (UID):</strong> Digunakan untuk menautkan hak lisensi pembelian Anda secara aman.</li>
+        </ul>
+
+        <h3>B. Data Pembelian & Lisensi (In-App Purchases)</h3>
+        <p>Jika Anda membeli lisensi <em>Master Pro</em> atau <em>Starter</em> melalui Google Play Billing, kami mencatat ringkasan transaksi (Order ID, Token Pembelian, Tanggal, dan Status Lisensi) pada Cloud Firestore kami.</p>
+        <div class="callout">
+          <div class="callout-title">🛡️ Keamanan Finansial Terjamin</div>
+          <p>Kami <strong>TIDAK PERNAH</strong> mengakses, mengumpulkan, atau menyimpan nomor kartu kredit, detail rekening, atau informasi pembayaran Anda. Seluruh transaksi finansial ditangani secara langsung dan aman oleh <strong>Google Play Store</strong>.</p>
+        </div>
+
+        <h3>C. Pencadangan Progres Belajar ke Google Drive (Opsional)</h3>
+        <p>Aplikasi menyediakan fitur opsional untuk mencadangkan data riwayat belajar Anda ke akun Google Drive pribadi Anda.</p>
+        <ul>
+          <li><strong>Ruang Lingkup Khusus (<code>appDataFolder</code>):</strong> Aplikasi hanya meminta izin untuk menyimpan berkas cadangan ke dalam folder privat aplikasi di Google Drive Anda.</li>
+          <li><strong>Privasi Penuh:</strong> Nǐ Hànzì <strong>TIDAK DAPAT</strong> melihat, membaca, atau mengakses foto, dokumen, atau berkas pribadi lainnya yang tersimpan di Google Drive Anda.</li>
+        </ul>
+
+        <h3>D. Iklan & Pengidentifikasi Perangkat (Google AdMob)</h3>
+        <p>Untuk pengguna versi gratis, aplikasi menayangkan iklan menggunakan Google AdMob SDK. Google AdMob dapat mengumpulkan pengidentifikasi perangkat anonim (seperti Android Advertising ID) untuk statistik penayangan iklan sesuai dengan <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a>.</p>
+
+        <h2>3. Penggunaan Izin Perangkat (Android Permissions)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Izin</th>
+              <th>Tujuan Penggunaan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>INTERNET</code></td>
+              <td>Autentikasi Firebase, pencadangan Google Drive, dan penayangan iklan AdMob.</td>
+            </tr>
+            <tr>
+              <td><code>ACCESS_NETWORK_STATE</code></td>
+              <td>Mengecek konektivitas internet sebelum sinkronisasi cloud dilakukan.</td>
+            </tr>
+            <tr>
+              <td><code>BILLING</code></td>
+              <td>Memproses transaksi lisensi berbayar resmi melalui Google Play Billing.</td>
+            </tr>
+            <tr>
+              <td><code>WAKE_LOCK</code></td>
+              <td>Memastikan audio pelafalan TTS Mandarin berbunyi lancar tanpa terhenti sistem.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>4. Berbagi Data kepada Pihak Ketiga</h2>
+        <p>Kami <strong>TIDAK PERNAH MENJUAL</strong> data pribadi Anda kepada pihak mana pun. Data hanya ditransmisikan ke penyedia infrastruktur tepercaya Google berikut:</p>
+        <ul>
+          <li><strong>Google Play Services:</strong> Layanan autentikasi & billing sistem operasi.</li>
+          <li><strong>Firebase Authentication & Cloud Firestore:</strong> Manajemen akun dan verifikasi lisensi.</li>
+          <li><strong>Google Drive API:</strong> Penyimpanan cadangan progres belajar pengguna.</li>
+          <li><strong>Google AdMob:</strong> Layanan iklan pada versi gratis.</li>
+        </ul>
+
+        <h2>5. Hak Pengguna & Penghapusan Data (Data Deletion)</h2>
+        <p>Google Play Store mewajibkan pengembang memberikan akses penghapusan data secara transparan:</p>
+        <ul>
+          <li><strong>Menghapus Data Lokal:</strong> Pengguna dapat kapan saja menghapus seluruh riwayat hafalan kartu lokal melalui menu <em>Pengaturan > Keluar Akun > Pilih "Hapus & Keluar"</em>.</li>
+          <li><strong>Menghapus Data Cadangan Drive:</strong> Pengguna dapat menghapus file cadangan langsung dari aplikasi atau melalui dashboard Google Drive pada menu <em>Setelan > Kelola Aplikasi</em>.</li>
+          <li><strong>Permohonan Penghapusan Akun Cloud:</strong> Anda berhak meminta penghapusan permanen akun dan audit log lisensi dari server Firestore kami dengan mengirimkan email ke <a href="mailto:nakitostudio01@gmail.com">nakitostudio01@gmail.com</a>. Permohonan akan diproses dalam 7 hari kerja.</li>
+        </ul>
+
+        <h2>6. Privasi Anak-Anak (COPPA)</h2>
+        <p>Aplikasi ini dibuat untuk tujuan pembelajaran bahasa umum dan tidak menargetkan pengumpulan data dari anak-anak di bawah usia 13 tahun. Jika Anda sebagai orang tua mendapati anak Anda memberikan data pribadi, hubungi kami agar kami dapat segera menghapusnya.</p>
+
+        <h2>7. Kontak Pengembang</h2>
+        <p>Jika ada pertanyaan atau masukan mengenai Kebijakan Privasi ini, silakan hubungi tim kami:</p>
+        <ul>
+          <li><strong>Email Dukungan:</strong> <a href="mailto:nakitostudio01@gmail.com">nakitostudio01@gmail.com</a></li>
+          <li><strong>Pengembang:</strong> Nakito Studio</li>
+          <li><strong>Repositori Resmi:</strong> <a href="https://github.com/nakitostudio01/ni-hanzi" target="_blank" rel="noopener">github.com/nakitostudio01/ni-hanzi</a></li>
+        </ul>
+      </div>
+
+      <!-- ================= ENGLISH CONTENT ================= -->
+      <div id="content-en" class="lang-section">
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>Nǐ Hànzì</strong> ("the App"). We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how your data is collected, used, stored, and protected when using the Nǐ Hànzì Chinese language learning application.</p>
+        <p>By downloading, installing, or using the App, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+
+        <h2>2. Information We Collect and How We Use It</h2>
+
+        <h3>A. Google Account (Google Sign-In)</h3>
+        <p>When you choose to sign in with your Google account, we receive basic public profile information from Google:</p>
+        <ul>
+          <li><strong>Email Address:</strong> Used as your unique account identifier.</li>
+          <li><strong>Display Name & Public Profile Photo:</strong> Used solely to display your profile in the App's Settings menu.</li>
+          <li><strong>User ID (UID):</strong> Used to securely attach and verify your purchased license tier.</li>
+        </ul>
+
+        <h3>B. In-App Purchases & License Audit</h3>
+        <p>If you purchase a <em>Master Pro</em> or <em>Starter</em> license through Google Play In-App Billing, we record a transaction audit entry (Order ID, Purchase Token, Date, and License Tier) in our Cloud Firestore database.</p>
+        <div class="callout">
+          <div class="callout-title">🛡️ Financial Security Guaranteed</div>
+          <p>We <strong>NEVER</strong> access, collect, or store your credit card numbers, bank account details, or payment credentials. All financial payment processing is handled directly and securely by the <strong>Google Play Store</strong>.</p>
+        </div>
+
+        <h3>C. Study Progress Backup to Google Drive (Optional)</h3>
+        <p>The App provides an optional feature allowing you to backup and restore your study progress data using your personal Google Drive account.</p>
+        <ul>
+          <li><strong>Restricted Scope (<code>appDataFolder</code>):</strong> The App only requests permission to read and write in its own private, isolated Application Data folder on your Google Drive.</li>
+          <li><strong>Strict Privacy:</strong> Nǐ Hànzì <strong>CANNOT</strong> view, read, modify, or delete any of your photos, documents, or personal files stored on Google Drive.</li>
+        </ul>
+
+        <h3>D. Advertisements & Device Identifiers (Google AdMob)</h3>
+        <p>For users on the free tier, the App may display ads using the Google AdMob SDK. Google AdMob may collect anonymous device identifiers (such as the Android Advertising ID) and crash logs to serve non-intrusive ads in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+
+        <h2>3. Android Permissions Used</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>INTERNET</code></td>
+              <td>Required for Firebase Authentication, Google Drive backup, and AdMob ads.</td>
+            </tr>
+            <tr>
+              <td><code>ACCESS_NETWORK_STATE</code></td>
+              <td>Checks whether internet connectivity is available before attempting cloud sync.</td>
+            </tr>
+            <tr>
+              <td><code>BILLING</code></td>
+              <td>Enables in-app license purchases via official Google Play Billing.</td>
+            </tr>
+            <tr>
+              <td><code>WAKE_LOCK</code></td>
+              <td>Ensures smooth playback of Chinese Text-to-Speech (TTS) pronunciation audio.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>4. Third-Party Data Sharing</h2>
+        <p>We <strong>NEVER SELL</strong> or rent your personal data to any third parties. Your data is only processed by the following trusted Google infrastructure services:</p>
+        <ul>
+          <li><strong>Google Play Services:</strong> Core operating system authentication and billing services.</li>
+          <li><strong>Firebase Authentication & Cloud Firestore:</strong> User account identity and license verification.</li>
+          <li><strong>Google Drive API:</strong> Direct transmission of user study progress backups.</li>
+          <li><strong>Google AdMob:</strong> Advertising services for the free tier.</li>
+        </ul>
+
+        <h2>5. User Rights & Data Deletion Policy</h2>
+        <p>In full compliance with Google Play Store Developer Policies, users have complete control over their data:</p>
+        <ul>
+          <li><strong>Local Data Deletion:</strong> You can clear your study flashcard progress at any time via <em>Settings > Sign Out > "Clear & Sign Out"</em> or the Reset Progress button.</li>
+          <li><strong>Drive Backup Deletion:</strong> You can delete your backup file within the app or from your Google Drive web console under <em>Settings > Manage Apps</em>.</li>
+          <li><strong>Cloud Account Deletion Request:</strong> You have the right to request permanent deletion of your Firebase account and purchase records by sending an email to <a href="mailto:nakitostudio01@gmail.com">nakitostudio01@gmail.com</a> with the subject <em>"Nǐ Hànzì Account Deletion Request"</em>. Requests are fulfilled within 7 business days.</li>
+        </ul>
+
+        <h2>6. Children's Privacy (COPPA Compliance)</h2>
+        <p>The App is designed for general educational purposes. We do not knowingly collect personal identifiable information from children under 13 years of age. If you believe your child has provided us with personal data, please contact us immediately for deletion.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions or feedback regarding this Privacy Policy, please contact us:</p>
+        <ul>
+          <li><strong>Support Email:</strong> <a href="mailto:nakitostudio01@gmail.com">nakitostudio01@gmail.com</a></li>
+          <li><strong>Developer:</strong> Nakito Studio</li>
+          <li><strong>Official Repository:</strong> <a href="https://github.com/nakitostudio01/ni-hanzi" target="_blank" rel="noopener">github.com/nakitostudio01/ni-hanzi</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nakito Studio · <strong>Nǐ Hànzì (你汉字)</strong>. All rights reserved.</p>
+    <p style="margin-top: 6px;">Hosted on GitHub Pages · <a href="https://github.com/nakitostudio01/ni-hanzi">Source Code</a></p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+      
+      const targetContent = document.getElementById('content-' + lang);
+      if (targetContent) targetContent.classList.add('active');
+      
+      const activeBtn = event.currentTarget;
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
