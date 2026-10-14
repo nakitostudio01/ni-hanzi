@@ -1,54 +1,39 @@
-# Nǐ Hànzì (你汉字) · Privacy Policy Website
+# Nǐ Hànzì (你汉字) · Official Privacy Policy
 
-Repositori ini memuat halaman web resmi **Kebijakan Privasi (Privacy Policy)** untuk aplikasi **Nǐ Hànzì** (`com.nakito.nihanzi`) yang dipublikasikan melalui **GitHub Pages**.
-
----
-
-## 🌐 Alamat Web Publik (GitHub Pages)
-
-Setelah di-upload dan diaktifkan di GitHub Pages, halaman ini dapat diakses secara publik di:
-- **`https://nakitostudio01.github.io/ni-hanzi/`**
-- **`https://nakitostudio01.github.io/ni-hanzi/privacy-policy.html`**
-
-URL di atas digunakan untuk:
-1. Kolom **Kebijakan Privasi** di **Google Play Console**.
-2. Tombol Kebijakan Privasi di dalam aplikasi Android.
+Repositori ini memuat halaman resmi **Kebijakan Privasi (Privacy Policy)** untuk aplikasi seluler **Nǐ Hànzì (你汉字)**.
 
 ---
 
-## 🚀 Cara Upload ke GitHub `nakitostudio01/ni-hanzi` (2 Cara Mudah)
+## 🌐 Tautan Resmi (Official Links)
 
-### Cara 1: Upload Langsung Lewat Browser (Tanpa Terminal)
-1. Buka repo Anda: [https://github.com/nakitostudio01/ni-hanzi](https://github.com/nakitostudio01/ni-hanzi)
-2. Klik tombol **Add file** > **Upload files**.
-3. **Seret (drag & drop)** semua file dari folder ini (`index.html`, `privacy-policy.html`, `KEBIJAKAN_PRIVASI.md`, `README.md`, `.nojekyll`) ke browser.
-4. Klik tombol hijau **Commit changes**.
-
-### Cara 2: Lewat Terminal Git
-```bash
-git init
-git remote add origin https://github.com/nakitostudio01/ni-hanzi.git
-git add .
-git commit -m "feat: initial privacy policy website"
-git branch -M main
-git push -u origin main
-```
+Halaman Kebijakan Privasi dapat diakses secara langsung melalui:
+- **Web Utama:** [https://nakitostudio01.github.io/ni-hanzi/](https://nakitostudio01.github.io/ni-hanzi/)
+- **Privacy Policy (Langsung):** [https://nakitostudio01.github.io/ni-hanzi/privacy-policy.html](https://nakitostudio01.github.io/ni-hanzi/privacy-policy.html)
+- **Dokumentasi Markdown:** [KEBIJAKAN_PRIVASI.md](./KEBIJAKAN_PRIVASI.md)
 
 ---
 
-## ⚙️ Cara Mengaktifkan GitHub Pages (Wajib Dilakukan Sekali)
-1. Buka [https://github.com/nakitostudio01/ni-hanzi](https://github.com/nakitostudio01/ni-hanzi)
-2. Klik tab **Settings** (di bagian atas repositori).
-3. Di panel menu kiri, klik **Pages**.
-4. Di bagian **Build and deployment**:
-   - **Source:** Pilih `Deploy from a branch`
-   - **Branch:** Pilih `main`, folder: `/ (root)`
-   - Klik **Save**.
-5. Tunggu 1–2 menit hingga muncul banner hijau bertuliskan:  
-   *"Your site is live at https://nakitostudio01.github.io/ni-hanzi/"*
+## 📱 Tentang Aplikasi Nǐ Hànzì
 
----
+**Nǐ Hànzì** adalah aplikasi pembelajaran karakter Hanzi dan kosakata bahasa Mandarin komprehensif untuk kurikulum **HSK 1 sampai HSK 6** (5.381 kosakata) yang dilengkapi animasi urutan goresan kuas (*stroke order*), kanvas latihan tulis mandiri Tian Zi Ge, contoh kalimat kontekstual bilingual, serta kuis latihan interaktif.
 
-## 📧 Kontak Dukungan
-- **Email:** nakitostudio01@gmail.com
+- **ID Paket (Package Name):** `com.nakito.nihanzi`
+- **Platform:** Android (Google Play Store)
 - **Pengembang:** Nakito Studio
+
+---
+
+## 🛡️ Ringkasan Kepatuhan & Privasi Data
+
+- **Keamanan Finansial:** Seluruh transaksi pembelian lisensi diproses langsung dan aman oleh Google Play Store. Kami **tidak pernah** mengumpulkan data kartu kredit atau informasi penagihan pengguna.
+- **Pencadangan Google Drive:** Fitur pencadangan hanya menggunakan ruang lingkup terbatas (`appDataFolder`). Aplikasi **tidak dapat** mengakses dokumen, foto, atau file pribadi lainnya di Google Drive pengguna.
+- **Kendali Penuh Pengguna:** Pengguna dapat mereset data hafalan lokal kapan saja melalui menu Pengaturan aplikasi atau mengajukan permohonan penghapusan data cloud.
+
+---
+
+## 📧 Kontak Pengembang & Dukungan
+
+Jika Anda memiliki pertanyaan atau masukan terkait Kebijakan Privasi ini:
+- **Email Dukungan:** [nakitostudio01@gmail.com](mailto:nakitostudio01@gmail.com)
+- **Pengembang:** Nakito Studio
+- **Hak Cipta:** &copy; 2026 Nakito Studio. All rights reserved.
