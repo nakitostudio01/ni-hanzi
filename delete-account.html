@@ -3,168 +3,455 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Penghapusan Akun & Data (Account & Data Deletion) · Nǐ Hànzì</title>
+  <title>Penghapusan Akun & Data (Account Deletion) · Nǐ Hànzì (你汉字)</title>
+  <meta name="description" content="Ketentuan dan instruksi resmi permohonan penghapusan akun dan data pengguna aplikasi Nǐ Hànzì - Nakito Studio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #B72B2B;
+      --primary-soft: #FDF2F2;
+      --primary-border: #F5C6C6;
       --ink: #1C242E;
       --ink-soft: #4A5568;
+      --ink-light: #718096;
       --bg: #F9F9F8;
       --card-bg: #FFFFFF;
       --border: #E2E8F0;
+      --gold: #D4AF37;
+      --accent: #2563EB;
+      --accent-soft: #EFF6FF;
+      --success: #16A34A;
+      --success-soft: #F0FDF4;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg);
       color: var(--ink);
-      line-height: 1.6;
-      padding: 30px 20px;
+      line-height: 1.68;
+      padding: 0;
+      margin: 0;
     }
-    .container {
-      max-width: 720px;
+
+    header {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF9F7 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 20px 28px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+
+    .header-content {
+      max-width: 840px;
       margin: 0 auto;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 36px 30px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
     }
-    .logo {
-      display: inline-block;
-      font-weight: 800;
-      color: var(--primary);
-      font-size: 22px;
-      margin-bottom: 20px;
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-soft);
+      border: 1px solid var(--primary-border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
       text-decoration: none;
     }
-    h1 {
-      font-size: 24px;
-      font-weight: 800;
-      margin-bottom: 12px;
-      color: var(--ink);
-    }
-    .lang-switch {
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border);
-      color: var(--ink-soft);
+
+    .brand-seal {
+      background: var(--primary);
+      color: white;
+      font-family: 'Noto Serif SC', serif;
       font-size: 13px;
-    }
-    h2 {
-      font-size: 17px;
       font-weight: 700;
-      margin: 22px 0 10px;
-      color: var(--primary);
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    p, li {
+
+    .brand-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .meta-sub {
+      font-size: 13px;
+      color: var(--ink-light);
+    }
+
+    .lang-switcher {
+      margin-top: 14px;
+      display: inline-flex;
+      background: #EDF2F7;
+      padding: 3px;
+      border-radius: 20px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 16px;
+      border-radius: 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: white;
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    main {
+      max-width: 840px;
+      margin: 30px auto 60px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 34px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.02);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 18.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-top: 30px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #EDF2F7;
+      padding-bottom: 8px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
       font-size: 14.5px;
       color: var(--ink-soft);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
+
     ul, ol {
-      padding-left: 24px;
-      margin-bottom: 16px;
+      margin-left: 22px;
+      margin-bottom: 14px;
+      color: var(--ink-soft);
+      font-size: 14.5px;
     }
-    .card {
-      background: #FDF2F2;
-      border: 1px solid #F5C6C6;
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .callout {
+      background: var(--success-soft);
+      border-left: 4px solid var(--success);
+      padding: 14px 16px;
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+
+    .callout.info {
+      background: var(--accent-soft);
+      border-left-color: var(--accent);
+    }
+
+    .callout.alert {
+      background: #FEF2F2;
+      border-left-color: #DC2626;
+    }
+
+    .callout-title {
+      font-weight: 600;
+      font-size: 13.5px;
+      color: var(--ink);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .callout p {
+      font-size: 13.5px;
+      margin-bottom: 0;
+    }
+
+    .email-box {
+      background: #FAFAFA;
+      border: 1px solid var(--border);
       border-radius: 10px;
       padding: 16px 20px;
-      margin: 20px 0;
+      margin: 14px 0 18px;
     }
-    .card p {
-      color: var(--ink);
-      margin: 0;
+
+    .email-box p {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .email-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .email-link {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--ink-light);
+      background: #FFFFFF;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
       font-weight: 500;
     }
-    .btn {
-      display: inline-block;
-      background: var(--primary);
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      margin-top: 10px;
+
+    footer a:hover {
+      text-decoration: underline;
     }
-    .footer {
-      margin-top: 36px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-      font-size: 13px;
-      color: #718096;
-      text-align: center;
+
+    .lang-section {
+      display: none;
     }
-    .footer a { color: var(--primary); text-decoration: none; }
+
+    .lang-section.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <a href="index.html" class="logo">Nǐ Hànzì · 你汉字</a>
-    
-    <h1>Permohonan Penghapusan Akun &amp; Data<br><small style="font-size: 16px; font-weight: 500; color: #718096;">Account &amp; Data Deletion Request</small></h1>
-    <div class="lang-switch">
-      Kebijakan Privasi &amp; Perlindungan Data Pengguna sesuai Regulasi Google Play Store
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="brand-badge">
+        <span class="brand-seal">汉</span>
+        <span class="brand-text">Nǐ Hànzì · 你汉字</span>
+      </a>
+
+      <!-- Title & Meta Indonesian -->
+      <div class="lang-section active" id="title-id">
+        <h1>Penghapusan Akun &amp; Data</h1>
+        <div class="meta-sub">Panduan Resmi Permohonan Penghapusan Akun Pengguna · Sesuai Kebijakan Google Play</div>
+      </div>
+
+      <!-- Title & Meta English -->
+      <div class="lang-section" id="title-en">
+        <h1>Account &amp; Data Deletion</h1>
+        <div class="meta-sub">Official Account Deletion Guidelines · Compliant with Google Play User Data Policy</div>
+      </div>
+
+      <!-- Language Switcher -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-id" onclick="switchLang('id')">🇮🇩 Bahasa Indonesia</button>
+        <button class="lang-btn" id="btn-en" onclick="switchLang('en')">🇬🇧 English</button>
+      </div>
     </div>
+  </header>
 
-    <h2>1. Cara Menghapus Akun dan Data Anda (Bahasa Indonesia)</h2>
-    <p>Pengguna aplikasi <strong>Nǐ Hànzì</strong> memiliki hak penuh untuk meminta penghapusan akun serta seluruh data pribadi yang tersimpan di server kami kapan saja:</p>
-    
-    <ol>
-      <li><strong>Melalui Aplikasi Secara Langsung:</strong>
-        <p>Buka aplikasi <strong>Nǐ Hànzì &gt; Pengaturan &gt; Keluar Akun &gt; Pilih "Hapus Data Lokal &amp; Keluar"</strong>. Anda juga dapat menggunakan tombol <strong>Mulai Mengulang</strong> di Dasbor Belajar untuk menghapus seluruh riwayat penguasaan kata dan skor kuis.</p>
-      </li>
-      <li><strong>Melalui Permohonan Email (Penghapusan Cloud Firebase):</strong>
-        <p>Kirimkan email permohonan ke tim dukungan kami dengan detail berikut:</p>
-        <div class="card">
-          <p>📧 <strong>Email Tujuan:</strong> <a href="mailto:nakitostudio01@gmail.com" style="color: #B72B2B; font-weight: bold;">nakitostudio01@gmail.com</a></p>
-          <p>📝 <strong>Subjek:</strong> Permohonan Penghapusan Akun Nǐ Hànzì</p>
-          <p>📋 <strong>Isi Email:</strong> Cantumkan alamat email Google yang Anda gunakan untuk login di aplikasi Nǐ Hànzì.</p>
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="card">
+
+      <!-- ========================================== -->
+      <!-- KONTEN BAHASA INDONESIA                    -->
+      <!-- ========================================== -->
+      <div class="lang-section active" id="content-id">
+
+        <div class="callout info">
+          <div class="callout-title">ℹ️ Hak Kendali Penuh Atas Data Anda</div>
+          <p>Sesuai dengan Kebijakan Data Pengguna Google Play Store, pengguna aplikasi <strong>Nǐ Hànzì (你汉字)</strong> memiliki hak penuh untuk meminta penghapusan akun serta seluruh data pribadi yang tersimpan pada sistem kami kapan saja.</p>
         </div>
-      </li>
-    </ol>
 
-    <h2>2. Data Apa yang Akan Dihapus dan Retensi Data</h2>
-    <ul>
-      <li><strong>Data yang Dihapus Secara Permanen:</strong> Akun otentikasi Firebase Anda (User ID &amp; Email), profil nama pengguna, dan seluruh catatan sinkronisasi cloud akan dihapus secara permanen dari Cloud Firestore dalam waktu maksimal <strong>7 (tujuh) hari kerja</strong>.</li>
-      <li><strong>Data yang Disimpan:</strong> Kami tidak menyimpan data pribadi Anda setelah proses penghapusan selesai. Catatan riwayat pembayaran dikelola secara langsung dan tunduk pada kepatuhan Google Play Billing.</li>
-    </ul>
+        <h2>1. Cara Mengajukan Penghapusan Akun &amp; Data</h2>
+        <p>Anda dapat melakukan penghapusan akun dan data melalui 2 (dua) cara praktis:</p>
 
-    <hr style="border: none; border-top: 1px solid var(--border); margin: 30px 0;">
+        <h3>Opsi A: Langsung dari Aplikasi Nǐ Hànzì (Instan)</h3>
+        <ol>
+          <li>Buka aplikasi <strong>Nǐ Hànzì</strong> di ponsel atau tablet Anda.</li>
+          <li>Buka menu <strong>Pengaturan (Settings)</strong> > <strong>Keluar Akun</strong>.</li>
+          <li>Pilih opsi <strong>"Hapus Data Lokal &amp; Keluar"</strong>.</li>
+          <li>Untuk mereset riwayat penguasaan kata dan skor kuis, Anda juga dapat menekan tombol <strong>Mulai Mengulang</strong> di tab Dasbor Belajar.</li>
+        </ol>
 
-    <h2>3. How to Request Account &amp; Data Deletion (English)</h2>
-    <p>Users of <strong>Nǐ Hànzì</strong> have the right to request the permanent deletion of their account and all associated personal data from our servers at any time:</p>
-    
-    <ol>
-      <li><strong>Inside the App:</strong>
-        <p>Go to <strong>Settings &gt; Sign Out &gt; Choose "Delete Local Data &amp; Sign Out"</strong>. You can also use the <strong>Reset Progress</strong> button in the Study Dashboard to clear your learning records and quiz scores.</p>
-      </li>
-      <li><strong>Via Email Request (Firebase Cloud Deletion):</strong>
-        <p>To request permanent deletion of your cloud account and associated data, please send an email to:</p>
-        <div class="card">
-          <p>📧 <strong>Support Email:</strong> <a href="mailto:nakitostudio01@gmail.com" style="color: #B72B2B; font-weight: bold;">nakitostudio01@gmail.com</a></p>
-          <p>📝 <strong>Subject:</strong> Nǐ Hànzì Account Deletion Request</p>
-          <p>📋 <strong>Body:</strong> Specify the registered Google account email address you used in the Nǐ Hànzì app.</p>
+        <h3>Opsi B: Permohonan Melalui Email Pengembang (Penghapusan Data Cloud)</h3>
+        <p>Jika Anda ingin menghapus identitas akun Google (Firebase Authentication UID) dan catatan verifikasi lisensi dari database cloud kami secara menyeluruh, kirimkan permohonan email ke tim pengembang resmi kami:</p>
+        
+        <div class="email-box">
+          <p>📧 <strong>Email Tujuan:</strong> <a class="email-link" href="mailto:nakitostudio01@gmail.com">nakitostudio01@gmail.com</a></p>
+          <p>📝 <strong>Subjek Email:</strong> <code>Permohonan Penghapusan Akun Nǐ Hànzì</code></p>
+          <p>📋 <strong>Isi Email:</strong> Cantumkan alamat email akun Google yang Anda gunakan untuk masuk (login) ke aplikasi Nǐ Hànzì.</p>
         </div>
-      </li>
-    </ol>
 
-    <h2>4. Data Deleted and Retention Period</h2>
-    <ul>
-      <li><strong>Data Permanently Deleted:</strong> Your Firebase Authentication credentials (UID, email address), user profile info, and all cloud sync records will be permanently erased from Cloud Firestore within <strong>7 business days</strong>.</li>
-      <li><strong>Data Retained:</strong> No personal identifiable information is retained. In-app purchase records are handled directly and securely by Google Play Billing according to statutory legal requirements.</li>
-    </ul>
+        <h2>2. Data Apa Saja yang Dihapus Secara Permanen?</h2>
+        <p>Setelah permohonan diverifikasi, kami akan menghapus data berikut dari server Cloud Firestore kami:</p>
+        <ul>
+          <li><strong>Identitas Akun:</strong> Akun Firebase Authentication UID, alamat email, dan nama tampilan profil Google Anda.</li>
+          <li><strong>Catatan Lisensi Cloud:</strong> Status sinkronisasi lisensi akun Anda pada dokumen database cloud.</li>
+          <li><strong>Data Cadangan Google Drive (Jika Ada):</strong> Anda dapat menghapus data cadangan aplikasi kapan saja langsung melalui dashboard Google Drive web di menu <em>Setelan &gt; Kelola Aplikasi &gt; Nǐ Hànzì &gt; Hapus data aplikasi tersembunyi</em>.</li>
+        </ul>
 
-    <div class="footer">
-      <p>&copy; 2026 Nakito Studio · Pengembang Aplikasi Nǐ Hànzì (NiZi)</p>
-      <p style="margin-top: 6px;"><a href="privacy-policy.html">Kebijakan Privasi (Privacy Policy)</a> · <a href="app-ads.txt">app-ads.txt</a></p>
+        <h2>3. Periode Retensi Data (Jangka Waktu Penyimpanan)</h2>
+        <ul>
+          <li>Permohonan penghapusan data cloud akan diproses dan dihapus secara permanen selambat-lambatnya dalam waktu <strong>7 (tujuh) hari kerja</strong> sejak permohonan diterima.</li>
+          <li>Kami <strong>tidak menyimpan</strong> data pribadi Anda setelah proses penghapusan selesai.</li>
+        </ul>
+
+        <h2>4. Data yang Tidak Dihapus atau Disimpan Terpisah</h2>
+        <ul>
+          <li><strong>Riwayat Pembelian Google Play Billing:</strong> Catatan transaksi finansial pembelian paket langganan dikelola secara langsung oleh <strong>Google Play Store</strong> dan tunduk pada undang-undang perpajakan serta ketentuan audit hukum Google. Kami tidak menyimpan informasi perbankan maupun kartu kredit Anda.</li>
+        </ul>
+
+        <div class="callout alert">
+          <div class="callout-title">⚠️ Penting Mengenai Pembatalan Langganan</div>
+          <p>Menghapus aplikasi atau mengajukan penghapusan akun <strong>tidak secara otomatis membatalkan langganan berulang Anda di Google Play</strong>. Pembatalan tagihan langganan harus dilakukan secara langsung melalui aplikasi <strong>Google Play Store &gt; Profil &gt; Pembayaran &amp; Langganan</strong>.</p>
+        </div>
+
+      </div>
+
+      <!-- ========================================== -->
+      <!-- ENGLISH CONTENT                            -->
+      <!-- ========================================== -->
+      <div class="lang-section" id="content-en">
+
+        <div class="callout info">
+          <div class="callout-title">ℹ️ Full Control Over Your Data</div>
+          <p>In accordance with Google Play's User Data Policy, users of the <strong>Nǐ Hànzì (你汉字)</strong> application have the right to request the permanent deletion of their account and all associated personal data from our servers at any time.</p>
+        </div>
+
+        <h2>1. How to Request Account &amp; Data Deletion</h2>
+        <p>You can delete your account and personal data through 2 (two) straightforward methods:</p>
+
+        <h3>Option A: Directly Inside the Nǐ Hànzì App (Instant)</h3>
+        <ol>
+          <li>Open the <strong>Nǐ Hànzì</strong> app on your smartphone or tablet.</li>
+          <li>Go to <strong>Settings</strong> > <strong>Sign Out</strong>.</li>
+          <li>Select the <strong>"Delete Local Data &amp; Sign Out"</strong> option.</li>
+          <li>To reset card mastery statuses and quiz history, you can also use the <strong>Reset Progress</strong> button in the Study Dashboard.</li>
+        </ol>
+
+        <h3>Option B: Request via Support Email (Cloud Data Erasure)</h3>
+        <p>To completely delete your Google account identity (Firebase Authentication UID) and cloud license verification records from our database servers, send an email request to our official support team:</p>
+        
+        <div class="email-box">
+          <p>📧 <strong>Recipient Email:</strong> <a class="email-link" href="mailto:nakitostudio01@gmail.com">nakitostudio01@gmail.com</a></p>
+          <p>📝 <strong>Subject Line:</strong> <code>Nǐ Hànzì Account Deletion Request</code></p>
+          <p>📋 <strong>Email Body:</strong> Specify the registered Google account email address you used to sign in to the Nǐ Hànzì app.</p>
+        </div>
+
+        <h2>2. What Data Is Permanently Deleted?</h2>
+        <p>Once your request is verified, we will permanently purge the following data from our Cloud Firestore servers:</p>
+        <ul>
+          <li><strong>Account Credentials:</strong> Your Firebase Authentication UID, registered email address, and Google display profile name.</li>
+          <li><strong>Cloud License Records:</strong> Your cloud account tier records on database documents.</li>
+          <li><strong>Google Drive App Data (If Created):</strong> You can delete hidden cloud backups directly through Google Drive web settings under <em>Settings &gt; Manage Apps &gt; Nǐ Hànzì &gt; Delete hidden app data</em>.</li>
+        </ul>
+
+        <h2>3. Data Retention Period</h2>
+        <ul>
+          <li>Cloud deletion requests are permanently fulfilled within <strong>7 business days</strong> of receipt.</li>
+          <li>We <strong>do not retain</strong> your personal identifiable data after deletion has been completed.</li>
+        </ul>
+
+        <h2>4. Data Retained or Handled Separately</h2>
+        <ul>
+          <li><strong>Google Play Billing Records:</strong> Financial records of your in-app subscription purchases are processed and stored directly by the <strong>Google Play Store</strong> in accordance with statutory accounting and tax regulations. We do not store or process your banking or credit card details.</li>
+        </ul>
+
+        <div class="callout alert">
+          <div class="callout-title">⚠️ Important: Subscription Cancellation</div>
+          <p>Uninstalling the app or submitting an account deletion request <strong>does not automatically cancel active recurring subscriptions</strong>. Subscription cancellation must be managed directly in the <strong>Google Play Store app &gt; Profile &gt; Payments &amp; Subscriptions</strong>.</p>
+        </div>
+
+      </div>
+
     </div>
-  </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Nakito Studio · <strong>Nǐ Hànzì (你汉字)</strong>. All rights reserved.</p>
+    <p style="margin-top: 6px;">
+      <a href="privacy-policy.html">Kebijakan Privasi (Privacy Policy)</a> · 
+      <a href="delete-account.html">Penghapusan Akun (Account Deletion)</a> · 
+      <a href="app-ads.txt">app-ads.txt</a>
+    </p>
+    <p style="margin-top: 6px; font-size: 12px; color: #A0AEC0;">Hosted on GitHub Pages</p>
+  </footer>
+
+  <!-- JAVASCRIPT LANG SWITCHER -->
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+
+      const targetTitle = document.getElementById('title-' + lang);
+      if (targetTitle) targetTitle.classList.add('active');
+
+      const targetContent = document.getElementById('content-' + lang);
+      if (targetContent) targetContent.classList.add('active');
+
+      const targetBtn = document.getElementById('btn-' + lang);
+      if (targetBtn) targetBtn.classList.add('active');
+    }
+  </script>
 </body>
 </html>
-
